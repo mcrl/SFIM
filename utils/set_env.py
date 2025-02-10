@@ -10,7 +10,7 @@ import torch.distributed as dist
 
 def automatic_opt_setting(opt):
 
-    if opt.data_name == 'UDC_SIT':
+    if opt.data_name == 'UDC-SIT':
         opt.num_ch = 4
         opt.perm_args = [2,0,1] 
         if opt.data_format == 0: # npy

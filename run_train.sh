@@ -28,7 +28,7 @@ python3 train.py \
     --arch SFIM \
     --batch_size ${BATCH_SIZE} --patch_size $PATCH_SIZE --patch_size_val $PATCH_SIZE \
     --mse_scale 1.0 --fft_scale_abs 1.0 --fft_scale_angle 1.0 --fft_scale 0.0 --ssim_scale 1.0 \
-    --data_name UDC_SIT --data_dir UDC_SIT --data_format 0 \
+    --data_name UDC-SIT --data_dir UDC-SIT --data_format 0 \
     --embed_dim 48 --num_FFTblock 6 --ffn_expansion_factor 3 \
     --nepoch 1000 --save_epoch 200 --ckpt 200 --val_epoch 1 \
     --save_name 'SIT_phase1' --lr_initial 0.0002 \

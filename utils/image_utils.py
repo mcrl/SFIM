@@ -229,7 +229,7 @@ def save_output(opt, tensor_to_save, epoch, res_dir, fnames, save_type=None, psn
 
     if opt.data_name == 'Feng-S' or opt.data_name == 'Zhou-S':
         save_3ch_tensor_png(opt, tensor_to_save, epoch, res_dir, fnames, save_type, psnr, ssim)
-    elif opt.data_name == 'UDC_SIT':
+    elif opt.data_name == 'UDC-SIT':
         save_4ch_npy_png(opt, tensor_to_save, epoch, res_dir, fnames, save_type, psnr, ssim)
     else:
         ValueError("Unsupported dataset")

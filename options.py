@@ -37,7 +37,7 @@ class Options():
 
         parser.add_argument('--precision', type=str, default="fp32", help='precision: mixed or fp32')
         parser.add_argument('--save_epoch', type=int, default=10, help='save epoch for restored images')
-        parser.add_argument('--perm_args', type=str, default='2,0,1', help='permute pattern for UDC_SIT images')
+        parser.add_argument('--perm_args', type=str, default='2,0,1', help='permute pattern for UDC-SIT images')
         parser.add_argument('--max_pxl', type=float, default=1023.0, help='max pixel value of input images')
         parser.add_argument('--source_dir', type=str, default='./background.dng', help='source_dir for save to png of 4 channel images')
         parser.add_argument('--tonemap', type=str2bool, default=False, help='Tone Mapping for HDR images')
@@ -67,8 +67,8 @@ class Options():
         parser.add_argument('--save_name', type=str, default='', help='')
 
         # args for dataset
-        parser.add_argument('--data_dir', type=str, default ='/data/s0/udc/dataset/UDC_SIT/npy/', help='directory of dataset')
-        parser.add_argument('--data_name', type=str, default ='UDC_SIT') # Feng, UDC_SIT, ...
+        parser.add_argument('--data_dir', type=str, default ='/data/s0/udc/dataset/UDC-SIT/npy/', help='directory of dataset')
+        parser.add_argument('--data_name', type=str, default ='UDC-SIT') # Feng, UDC-SIT, ...
         parser.add_argument('--data_format', type=int, default=0, help='0 : npy, 1 : png, 2 : jpg, 3 : pkl')
 
         # args for Thunder Transformer (it was in Uformer)
