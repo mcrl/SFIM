@@ -9,7 +9,7 @@ This repository contains the code for SFIM model of the following paper.
 
 The following diagram illustrates the SFIM model architecture:
 
-![SFIM Architecture](assets/sfim.png)
+![SFIM Architecture](assets/SFIM.png)
 
 
 ## Requirement
@@ -21,18 +21,33 @@ This project requires the following dependencies:
 - **GPU**: NVIDIA GeForce RTX 3090  
 
 To set up the environment, install dependencies using:  
-```conda env create -f udc.yaml```
+```bash
+conda env create -f udc.yaml
+```
 
 ## Get Started
 This repository provides scripts for training and testing the model.
 
+### Dataset Setup
+
+To properly set up the dataset, create a symbolic link inside the `SFIM` directory that points to the actual dataset location.  
+
+Run the following command:  
+```bash
+ln -s /path/to/your/dataset SFIM/UDC-SIT
+```
+
 ### Train
 To start training, run the following command:  
-``` ./run_train.sh```
+```bash
+./run_train.sh
+```
 
 ### Test
-To evaluate the trained model, run:
-``` ./run_test.sh```
+To evaluate the trained model, run the following command:   
+```bash
+./run_test.sh
+```
 This script will load the trained model and perform inference on the test dataset.
 
 
