@@ -1,2 +1,71 @@
 # SFIM
-Official GitHub repository for SFIM
+
+This repository contains the code for SFIM model of the following paper.
+> Kyusu Ahn, Jinpyo Kim, Chanwoo Park, JiSoo Kim, and Jaejin Lee. **Integrating Spatial and Frequency Information for Under-Display Camera Image Restoration** arXiv preprint arXiv:2501.18517 (2025).<br>
+
+[[Paper](https://arxiv.org/pdf/2501.18517)]
+
+## SFIM Architecture
+
+The following diagram illustrates the SFIM model architecture:
+
+![SFIM Architecture](assets/sfim.png)
+
+
+## Requirement
+This project requires the following dependencies:
+- **Python**: 3.9.16
+- **PyTorch**: 2.0.1  
+- **CUDA**: 11.8  
+- **cuDNN**: 8.7.0  
+- **GPU**: NVIDIA GeForce RTX 3090  
+
+To set up the environment, install dependencies using:  
+```conda env create -f udc.yaml```
+
+## Get Started
+This repository provides scripts for training and testing the model.
+
+### Train
+To start training, run the following command:  
+``` ./run_train.sh```
+
+### Test
+To evaluate the trained model, run:
+``` ./run_test.sh```
+This script will load the trained model and perform inference on the test dataset.
+
+
+## Results
+The following image shows the results of the SFIM model on UDC-SIT. The results shows that SFIM outperforms the others in eliminating the flare caused by distortion around light sources.
+
+
+![SFIM Results on UDC-SIT](assets/sfim_results_udc_sit.png)
+
+
+
+## Citation
+
+   If you find our repository useful for your research, please consider citing our paper:
+
+   ```bibtex
+    @article{ahn2025integrating,
+      title={Integrating Spatial and Frequency Information for Under-Display Camera Image Restoration},
+      author={Ahn, Kyusu and Kim, Jinpyo and Park, Chanwoo and Kim, JiSoo and Lee, Jaejin},
+      journal={arXiv preprint arXiv:2501.18517},
+      year={2025}
+    }
+   ```
+
+## Licences
+
+Copyright (c) 2025 Thunder Research Group, Seoul National University
+
+SFIM code is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). This means that you are allowed to freely utilize, share, and modify this work under the condition of properly attributing the original author, distributing any derived works under the same license, and utilizing it exclusively for non-commercial purposes.
+
+## Acknowledgement
+Thanks to the great efforts of the open-sourced projects.
+- ECFNet (<https://github.com/zhuyr97/ECFNet>)
+- Uformer (<https://github.com/ZhendongWang6/Uformer>)
+- CBAM (<https://github.com/Jongchan/attention-module>)
+- MIMO-UNet (<https://github.com/chosj95/MIMO-UNet>)
