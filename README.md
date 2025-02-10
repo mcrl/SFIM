@@ -1,7 +1,7 @@
 # SFIM
 
 This repository contains the code for SFIM model of the following paper.
-> Kyusu Ahn, Jinpyo Kim, Chanwoo Park, JiSoo Kim, and Jaejin Lee. **Integrating Spatial and Frequency Information for Under-Display Camera Image Restoration** arXiv preprint arXiv:2501.18517 (2025).<br>
+> Kyusu Ahn, Jinpyo Kim, Chanwoo Park, JiSoo Kim, and Jaejin Lee. **Integrating Spatial and Frequency Information for Under-Display Camera Image Restoration**, arXiv preprint arXiv:2501.18517 (2025).<br>
 
 [[Paper](https://arxiv.org/pdf/2501.18517)]
 
