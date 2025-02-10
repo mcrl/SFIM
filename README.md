@@ -17,7 +17,8 @@ This project requires the following dependencies:
 - **Python**: 3.9.16
 - **PyTorch**: 2.0.1  
 - **CUDA**: 11.8  
-- **cuDNN**: 8.7.0  
+- **cuDNN**: 8.7.0 
+- **OpenMPI**: 4.1.0+ (for multi-GPU distributed execution)
 - **GPU**: NVIDIA GeForce RTX 3090  
 
 To set up the environment, install dependencies using:  
@@ -40,13 +41,13 @@ ln -s /path/to/your/dataset SFIM/UDC-SIT
 ### Train
 To start training, run the following command:  
 ```bash
-./run_train.sh
+mpirun -np 4 -H b03:4 -x MASTER_ADDR=b03 ./run_train.sh
 ```
 
 ### Test
 To evaluate the trained model, run the following command:   
 ```bash
-./run_test.sh
+mpirun -np 4 -H b03:4 -x MASTER_ADDR=b03 ./run_test.sh
 ```
 This script will load the trained model and perform inference on the test dataset.
 
