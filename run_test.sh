@@ -15,7 +15,7 @@ set -a
 : ${PATCH_SIZE=768}
 : ${OVERLAP=0}
 : ${BATCH_SIZE=1}
-: ${MODEL_PATH=model_best.pth}
+: ${MODEL_PATH=model_sfim.pth}
 set +a
 
 WORLD_RANK=${OMPI_COMM_WORLD_RANK}
@@ -32,5 +32,5 @@ python3 test.py \
     --data_name UDC-SIT --data_dir UDC-SIT --data_format 0 \
     --embed_dim 48 --num_FFTblock 6 --ffn_expansion_factor 3 \
     --save_name 'SIT_test' --precision "fp32" \
-    --resume_from model_best.pth \
+    --resume_from model_sfim.pth \
     --restored_img_dir ./restored_images/SIT_phase2
