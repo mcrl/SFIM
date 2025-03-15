@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# killall python3; mpirun -np 4 -H b03:4 -x MASTER_ADDR=b03 ./run_test.sh
+# killall python3; mpirun -np 4 -H b08:4 -x MASTER_ADDR=b08 ./run_test.sh
 
 export CUDA_DEVICE_MAX_CONNECTIONS=1
 
@@ -15,7 +15,7 @@ set -a
 : ${PATCH_SIZE=768}
 : ${OVERLAP=0}
 : ${BATCH_SIZE=1}
-: ${MODEL_PATH=/shared/s1/lab08/udc_logs/phase2_768_run1/models/model_best.pth}
+: ${MODEL_PATH=model_best.pth}
 set +a
 
 WORLD_RANK=${OMPI_COMM_WORLD_RANK}
@@ -32,5 +32,5 @@ python3 test.py \
     --data_name UDC-SIT --data_dir UDC-SIT --data_format 0 \
     --embed_dim 48 --num_FFTblock 6 --ffn_expansion_factor 3 \
     --save_name 'SIT_test' --precision "fp32" \
-    --resume_from ./logs/SIT_phase1_run1/models/model_best.pth \
-    --restored_img_dir ./restored_images/SIT_phase1
+    --resume_from model_best.pth \
+    --restored_img_dir ./restored_images/SIT_phase2

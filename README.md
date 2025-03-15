@@ -45,7 +45,12 @@ mpirun -np 4 -H b03:4 -x MASTER_ADDR=b03 ./run_train.sh
 ```
 
 ### Test
-To evaluate the trained model, run the following command:   
+To evaluate the trained model, first, download the pretrained model from [this link](https://drive.google.com/file/d/1IlLJfqqstKO79GqOZ26y79VZYAvYTqxi/view?usp=sharing).
+
+Next, ensure that you modify the path to the pretrained model appropriately in the `run_test.sh` script.
+
+Once the path is updated, run the following command:
+
 ```bash
 mpirun -np 4 -H b03:4 -x MASTER_ADDR=b03 ./run_test.sh
 ```
